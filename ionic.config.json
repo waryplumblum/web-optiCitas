@@ -1,0 +1,7 @@
+{
+  "name": "optiCitas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
