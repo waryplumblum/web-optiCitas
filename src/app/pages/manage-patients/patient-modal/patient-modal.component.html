@@ -1,3 +1,42 @@
-<p>
-  patient-modal works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ isEdit ? 'Editar Paciente' : 'Agregar Paciente' }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre Completo</ion-label>
+      <ion-input type="text" [(ngModel)]="patient.name" name="name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input type="text" [(ngModel)]="patient.contact" name="contact" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="patient.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="patient.address" name="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-input type="date" [(ngModel)]="patient.dob" name="dob"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Notas Médicas</ion-label>
+      <ion-textarea [(ngModel)]="patient.notes" name="notes"></ion-textarea>
+    </ion-item>
+    <ion-footer>
+      <ion-button expand="full" type="submit">{{ isEdit ? 'Guardar Cambios' : 'Agregar Paciente' }}</ion-button>
+    </ion-footer>
+  </form>
+</ion-content>
