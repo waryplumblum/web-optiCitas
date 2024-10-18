@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { homeOutline, homeSharp, calendarOutline, calendarSharp, listOutline, listSharp, peopleOutline, peopleSharp, medkitOutline, medkitSharp, clipboardOutline, clipboardSharp, personOutline, personSharp } from 'ionicons/icons';
+import { homeOutline, homeSharp, calendarOutline, calendarSharp, listOutline, listSharp, peopleOutline, peopleSharp, medkitOutline, medkitSharp, clipboardOutline, clipboardSharp, personOutline, personSharp, add, create, trash } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +31,8 @@ export class AppComponent {
       peopleOutline, peopleSharp,
       medkitOutline, medkitSharp,
       clipboardOutline, clipboardSharp,
-      personOutline, personSharp
+      personOutline, personSharp,
+      add, create, trash
     });
   }
 }

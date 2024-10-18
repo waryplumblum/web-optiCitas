@@ -1,13 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>manage-patients</ion-title>
+    <ion-title>Gestionar Pacientes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addPatient()">
+        <ion-icon slot="icon-only" name="add" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">manage-patients</ion-title>
+      <ion-title size="large">Pacientes Registrados</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let patient of patients">
+      <ion-label>
+        <h2>{{ patient.name }}</h2>
+        <p>{{ patient.contact }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="editPatient(patient)">
+          <ion-icon name="create" color="primary"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deletePatient(patient.id)">
+          <ion-icon name="trash" color="danger"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
 </ion-content>
