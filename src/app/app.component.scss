@@ -29,17 +29,13 @@ ion-menu.md ion-list#inbox-list {
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
-
   min-height: 20px;
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
-
   margin-bottom: 18px;
-
   color: #757575;
-
   min-height: 26px;
 }
 
@@ -110,10 +106,34 @@ ion-menu.ios ion-note {
 ion-note {
   display: inline-block;
   font-size: 16px;
-
   color: var(--ion-color-medium-shade);
 }
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+/* Estilos responsivos */
+ion-menu {
+  width: 300px; // Ajusta el ancho del menú en pantallas grandes
+
+  @media (max-width: 768px) {
+    width: 100%; // El menú ocupa toda la pantalla en móviles
+  }
+}
+
+ion-list {
+  padding: 20px 0;
+
+  @media (max-width: 768px) {
+    padding: 10px 0; // Ajustar el padding en móviles
+  }
+}
+
+ion-content {
+  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+
+  @media (max-width: 768px) {
+    --background: #f2f2f2; // Cambiar el fondo en dispositivos móviles
+  }
 }

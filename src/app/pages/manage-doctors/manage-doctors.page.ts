@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
   selector: 'app-manage-doctors',
   templateUrl: './manage-doctors.page.html',
   styleUrls: ['./manage-doctors.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, SharedModule]
 })
 export class ManageDoctorsPage implements OnInit {
 

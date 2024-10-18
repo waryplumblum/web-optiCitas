@@ -1,0 +1,28 @@
+ion-list {
+  margin-top: 15px;
+}
+
+ion-item {
+  --border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+ion-label h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  ion-label h2 {
+    font-size: 0.9rem;
+  }
+
+  ion-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  ion-icon {
+    font-size: 1.2rem;
+  }
+}
