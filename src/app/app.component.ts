@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp } from 'ionicons/icons';
+import { homeOutline, homeSharp, calendarOutline, calendarSharp, listOutline, listSharp, peopleOutline, peopleSharp, medkitOutline, medkitSharp, clipboardOutline, clipboardSharp, personOutline, personSharp } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -14,15 +14,24 @@ import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutlin
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/home/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/home/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/home/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/home/archived', icon: 'archive' },
-    { title: 'Trash', url: '/home/trash', icon: 'trash' },
-    { title: 'Spam', url: '/home/spam', icon: 'warning' },
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Agendar Citas', url: '/schedule-appointments', icon: 'calendar' },
+    { title: 'Consultar Citas', url: '/view-appointments', icon: 'list' },
+    { title: 'Gestionar Pacientes', url: '/manage-patients', icon: 'people' },
+    { title: 'Gestionar Doctores', url: '/manage-doctors', icon: 'medkit' },
+    { title: 'Gestionar Procedimientos', url: '/manage-procedures', icon: 'clipboard' },
+    { title: 'Ver Perfil', url: '/profile', icon: 'person' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
   constructor() {
-    addIcons({ mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp });
+    addIcons({
+      homeOutline, homeSharp,
+      calendarOutline, calendarSharp,
+      listOutline, listSharp,
+      peopleOutline, peopleSharp,
+      medkitOutline, medkitSharp,
+      clipboardOutline, clipboardSharp,
+      personOutline, personSharp
+    });
   }
 }
