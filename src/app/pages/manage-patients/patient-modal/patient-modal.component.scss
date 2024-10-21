@@ -16,13 +16,9 @@ ion-input,
 ion-textarea {
   background-color: #ffffff; // Fondo blanco
   color: #000000; // Texto negro
-  padding: 0.15em; // Espacio interno reducido
   border-radius: 0.25em; // Bordes redondeados
   border: 1px solid #ccc; // Borde gris
-  --min-height: 1.5em; // Altura mínima del input más pequeña
   font-size: 0.9rem; // Tamaño de fuente ajustado
-  box-sizing: border-box; // Asegura que el padding no afecte el tamaño
-  transition: all 0.2s ease-in-out; // Transición suave
   margin-top: 0.5em; // Aumenta el espacio superior adicional para el input
 }
 
@@ -43,6 +39,5 @@ ion-textarea:focus {
   ion-input,
   ion-textarea {
     font-size: 0.85rem; // Tamaño de fuente para móviles
-    --min-height: 0.5em; // Altura mínima más pequeña para móviles
   }
 }
