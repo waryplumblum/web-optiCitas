@@ -32,7 +32,6 @@ export class AppComponent {
       medkitOutline, medkitSharp,
       clipboardOutline, clipboardSharp,
       personOutline, personSharp,
-      add, create, trash
     });
   }
 }
