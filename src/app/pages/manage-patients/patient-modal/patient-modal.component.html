@@ -12,27 +12,27 @@
 <ion-content>
   <form (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-label position="floating">Nombre Completo</ion-label>
+      <ion-label position="stacked">Nombre Completo</ion-label>
       <ion-input type="text" [(ngModel)]="patient.name" name="name" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Teléfono</ion-label>
+      <ion-label position="stacked">Teléfono</ion-label>
       <ion-input type="text" [(ngModel)]="patient.contact" name="contact" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-label position="stacked">Correo Electrónico</ion-label>
       <ion-input type="email" [(ngModel)]="patient.email" name="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Dirección</ion-label>
+      <ion-label position="stacked">Dirección</ion-label>
       <ion-input type="text" [(ngModel)]="patient.address" name="address"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-label position="stacked">Fecha de Nacimiento</ion-label>
       <ion-input type="date" [(ngModel)]="patient.dob" name="dob"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Notas Médicas</ion-label>
+      <ion-label position="stacked">Notas Médicas</ion-label>
       <ion-textarea [(ngModel)]="patient.notes" name="notes"></ion-textarea>
     </ion-item>
     <ion-footer>
